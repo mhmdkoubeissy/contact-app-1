@@ -38,6 +38,7 @@ export class ContactService {
   }
 
   addContact(contact: ContactModel) {
+    contact.id = this.contacts.length + 1;
     this.contacts.push(contact);
     this.contactsSubject.next(this.contacts);
   }
