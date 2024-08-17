@@ -4,7 +4,7 @@ import { ContactModel } from '../models/contactModel';
 @Injectable({
   providedIn: 'root'
 })
-export class ContactServiceService {
+export class ContactService {
 
   contact1 : ContactModel = {
     id : 1 ,
@@ -53,8 +53,8 @@ export class ContactServiceService {
     }
   }
 
-  searchContact(id: number): ContactModel | undefined {
-    return this.contacts.find(contact => contact.id === id);
+  searchContact(name: string): ContactModel | undefined {
+    return this.contacts.find(contact => contact.name === name);
   }
 
 }

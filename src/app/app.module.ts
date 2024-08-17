@@ -10,12 +10,17 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatTableModule } from '@angular/material/table';
+import { MatIconModule } from '@angular/material/icon';
+import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+import { AddContactDialogComponent } from './contact/addContactDialog/addContactDialog.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-      ContactComponent
+    ContactComponent,
+    AddContactDialogComponent
    ],
   imports: [
     BrowserModule,
@@ -25,7 +30,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatInputModule,
     MatFormFieldModule,
     MatButtonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatTableModule,
+    MatIconModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
